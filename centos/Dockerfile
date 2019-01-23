@@ -9,7 +9,7 @@ RUN yum update -q -y \
  && rm -f /packages
 
 RUN cd /tmp \
- && git clone https://github.com/root-project/root /usr/src/root \
+ && git clone --branch v6-14-00-patches https://github.com/root-project/root /usr/src/root \
  && cmake3 /usr/src/root \
 	-Dall=ON \
 	-Dcxx11=ON \
